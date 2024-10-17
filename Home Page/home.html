@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="nav-logo">
+                <h2 class="namelogo">Instagram</h2>
+                <img src="/Images/instagram.png" alt="">
+            </div>
+            <div class="nav-topics">
+                <div class="home topics">
+                    <img src="/Images/hut.png" alt="">
+                    <p>Home</p>
+                </div>
+                <div class="topics" onclick="search()">
+                    <img src="/Images/search.png" alt="">
+                    <p>Search</p>
+                </div>
+                <div class="explore topics">
+                    <img src="/Images/compass.png" alt="">
+                    <p>Explore</p>
+                </div>
+                <div class="reels topics">
+                    <img src="/Images/reels.png" alt="">
+                    <p>Reels</p>
+                </div>
+                <div class="message topics">
+                    <img src="/Images/messenger.png" alt="">
+                    <p>Messages</p>
+                </div>
+                <div class="notifications topics">
+                    <img src="/Images/notification.png" alt="">
+                    <p>Notifications</p>
+                </div>
+                <div class="create topics">
+                    <img src="/Images/tab.png" alt="">
+                    <p>Create</p>
+                </div>
+                <div class="profile topics">
+                    <img src="/Images/user.png" alt="">
+                    <h3 onclick="profile()">Profile</h3>
+                </div>
+            </div>
+            <div class="nav-threads topics">
+                <img src="/Images/threads.png" alt="">
+                <p>Threads</p>
+            </div>
+            <div class="nav-more topics">
+                <img src="/Images/menu.png" alt="">
+                <p>More</p>
+            </div>
+        </div>
+        <div class="stories">
+            <div class="insta-story">
+                <div class="back">
+                    <div class="story1">
+                        <img src="flower1.jpeg" alt="" class="story1">
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="story1">
+                        <img src="flower1.jpeg" alt="" class="story1">
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="story1">
+                        <img src="flower1.jpeg" alt="" class="story1">
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="story1">
+                        <img src="flower1.jpeg" alt="" class="story1">
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="story1">
+                        <img src="flower1.jpeg" alt="" class="story1">
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="story1">
+                        <img src="flower1.jpeg" alt="" class="story1">
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="story1">
+                        <img src="flower1.jpeg" alt="" class="story1">
+                    </div>
+                </div>
+            </div>
+            <div class="posts" id="post-container">
+            </div>
+        </div>
+        <div class="contacts">
+            <div class="username">
+                <img src="/Images/user.png" alt"">
+                <div class="user-account">
+                    <p>_ppratham_kumar</p>
+                    <p class="user-name">Pratham Kumar</p>
+                </div>
+                <a href="#" onclick="toggleLogin()">Switch</a>
+                <div class="modal-background" id="modalBackground"></div>
+                <div class="login-modal" id="loginModal">
+                    <div class="xIcon">
+                        <i class="fa-solid fa-xmark" onclick='xicon()'></i>
+                    </div>
+                    <p class="namelogo">Instagram</p>
+                    <form>
+                        <div class="inputs">
+                            <input type="text" id="username" name="username"
+                                placeholder="Phone number, username, or email">
+                            <input type="password" id="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="checking">
+                            <input type="checkbox" id="checkbox">
+                            <span>Save login info</span>
+                        </div>
+                    </form>
+                    <div class="logfor">
+                        <button class="loginbutton">Log in</button>
+                        <a href="">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="suggest">
+                <p class="suggFor">Suggested for you</p>
+                <p class="see">See All</p>
+            </div>
+            <div class="suggestions" id="suggest-container">
+            </div>
+            <div class="about">
+                <div class="about-topics">
+                    <p onclick="footabout()">About</p>
+                    <p onclick="foothelp()">Help</p>
+                    <p onclick="footpress()">Press</p>
+                    <p onclick="footapi()">API</p>
+                    <p onclick="footjobs()">Jobs</p>
+                    <p onclick="footprivacy()">Privacy</p>
+                    <p onclick="footterms()">Terms</p>
+                    <p onclick="footlocations()">Locations</p>
+                    <p onclick="footlanguage()">Language</p>
+                    <p onclick="footmeta()">Meta Verified</p>
+                </div>
+                <div class="copy">© 2024 Instagram from Meta</div>
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+    <script src="suggestion.js"></script>
+    <script src="about.js"></script>
+    <script src="profile.js"></script>
+</body>
+
+</html>
