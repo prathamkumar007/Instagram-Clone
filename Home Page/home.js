@@ -36,10 +36,14 @@ function displayPosts() {
         <div class="feature">
             <div class="likecommentshare">
                 <button class="like">
-                    <i class="far fa-heart" value = 0></i><p>${post.likes}</p>
+                    <i class="far fa-heart" class="light-icon"></i>
+                    <img src="postLike.png" alt="" class="icon">
+                    <p class="post-likes">${post.likes}</p>
                 </button>
                 <button class="comment">
-                    <i class="far fa-comment"></i><p>${post.comments}</p>
+                    <i class="far fa-comment"></i>
+                    <img src="postComment.png" alt="" class="icon">
+                    <p class="post-likes">${post.comments}</p>
                 </button>
                 <button class="share">
                     <i class="far fa-paper-plane"></i><p>${post.shares}</p>
@@ -53,7 +57,6 @@ function displayPosts() {
     </div>
     `;
     postElement.innerHTML = innerHTML;
-    console.log(post);
   });
 }
 displayPosts();

@@ -69,9 +69,18 @@ body,html{
     width: 45vw;
     justify-content: space-evenly;
 }
+.all-story{
+    display: flex;
+    flex-direction: column;
+}
+.user-story{
+    margin-left: 1.3vw;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
 .story1{
-    width: 5vw;
-    height: 10vh;
+    width: 4.5vw;
+    height: 9vh;
     border-radius: 100%;
     object-fit: cover;
 }
@@ -83,9 +92,9 @@ body,html{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5.4vw;
-    height: 10.6vh;
-    background: linear-gradient(240deg, rgb(249, 1, 42),rgb(247, 10, 247), yellow, orange );
+    width: 4.8vw;
+    height: 9.6vh;
+    background: linear-gradient(240deg, rgb(249, 1, 42),rgb(247, 10, 247), rgb(252, 12, 52), yellow, orange );
     border-radius: 50%;
 }
 .contacts{
@@ -192,7 +201,7 @@ body,html{
 .name {
     display: flex;
     align-items: center;
-    padding: 12px;
+    padding: 5px;
 }
 
 .name .tick {
@@ -227,8 +236,9 @@ body,html{
     display: flex;
     align-items: center;
 }
-.liked{
-    background: url('redlike.png') center center no-repeat;
+.like .icon{
+    width: 24px;
+    display: none;
 }
 .like p, .comment p, .share p{
     font-size: 0.9rem;
@@ -238,6 +248,7 @@ body,html{
 .img-container{
     width: 36vw;
     margin-top: 2vh;
+    border-radius: 5px;
 }
 .img-container img{
     width: 100%;
@@ -343,4 +354,15 @@ body,html{
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+.dark-icon{
+    display: none;
 }
