@@ -48,7 +48,7 @@ body,html{
     padding-bottom: 2vw;
 }
 .topics{
-    font-size: 0.9vw;
+    font-size: 2.2vh;
     display: flex;
     margin-bottom: 1.7vw;
     gap: 10px;
@@ -384,3 +384,42 @@ body,html{
 .inputs-dark{
     background-color: #1A1A1A;
 }
+.more-settings{
+    line-height: 55px;
+    font-size: 2vh;
+    font-weight: 400;
+    width: 40vh;
+    height: auto;
+    display: none;  
+    top: 20%;
+    left: 1%;
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    box-shadow: 1px 1px 10px 2px rgb(0, 0, 0, 0.5);
+    border-radius: 1vh;
+}
+.more-settings img{
+    width: 1.1vw;
+    height: 2.2vh;
+}
+hr.hr-settings{
+    width: 100%;
+    /* border: 1px solid #DBDBDB80; */
+    /* border: 1px solid #55555580; */
+}
+.more-set{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 1vw;
+    cursor: pointer;
+    padding-top: 5px;
+}
+/* hr.hr-2{
+    border: 3px solid #DBDBDB4D;
+    /* border: 3px solid #5555554D; */
+.dark-set{
+    display: none;
+}
+

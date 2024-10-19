@@ -1,6 +1,6 @@
 function displayDarkMode() {
   let mode = document.getElementById("darkMode");
-  let currMode = "light";
+  let currMode = localStorage.getItem("mode")||"light";
   let body = document.body;
 
   function updateIcons() {
@@ -22,20 +22,29 @@ function displayDarkMode() {
     document.querySelectorAll('.dark-img').forEach(limg => {
       limg.style.display = currMode === "dark" ? "block" : "none";
     });
+    document.querySelectorAll('.light-set').forEach(lset=>{
+      lset.style.display=currMode==="dark"? "none":"block";
+    })
+    document.querySelectorAll('.dark-set').forEach(lset=>{
+      lset.style.display=currMode==="dark"? "block":"none";
+    });
   }
-  mode.addEventListener("click", () => { 
-    if (currMode === "light") {
-      currMode = "dark";
+  const hr1=document.getElementById('hr2');
+  const hr2=document.getElementById('hrset');
+  function applyMode(){
+    if (currMode === "dark") {
       body.classList.add("dark");
       body.classList.remove("light");
       document.querySelector('.login-modal').classList.add("showDark");
       document.getElementById('username').classList.add("inputs-dark");
       document.getElementById('password').classList.add("inputs-dark");
-      document.getElementById('username').style = "border: none; background-color: #1a1a1a";
-      document.getElementById('password').style = "border: none; background-color: #1a1a1a";
+      document.getElementById('username').style = "border: none; background-color: #1a1a1a; color:white";
+      document.getElementById('password').style = "border: none; background-color: #1a1a1a; color:white";
+      document.querySelector('.more-settings').style.backgroundColor="#262626";
+      hr1.style.border="3px solid #5555554D";
+      hr2.style.border="1px solid #55555580";
     } 
     else {
-      currMode = "light";
       body.classList.add("light");
       body.classList.remove("dark");
       document.querySelector('.login-modal').classList.remove("showDark");
@@ -43,8 +52,17 @@ function displayDarkMode() {
       document.getElementById('password').classList.remove("inputs-dark");
       document.getElementById('username').style = "border: 1px solid grey; background-color: #f5f5f5";
       document.getElementById('password').style = "border: 1px solid grey; background-color: #f5f5f5";
+      document.querySelector('.more-settings').style.backgroundColor="white";
+      hr1.style.border="3px solid #DBDBDB4D";
+      hr2.style.border="1px solid #DBDBDB80";
     }
     updateIcons();
-  });
+  }
+  applyMode();
+  mode.addEventListener("click",()=>{
+    currMode=currMode==="light"?"dark":"light";
+    localStorage.setItem("mode",currMode);
+    applyMode();
+  })
 }
 displayDarkMode();

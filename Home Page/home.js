@@ -103,3 +103,16 @@ function xicon(){
     background.style.display='none';
     body.classList.remove('dimmed');
 }
+
+let currSet="none";
+function Settings(){
+    const settings=document.querySelector('.more-settings');
+    if(currSet==="none"){
+        currSet="block";
+        settings.style.display="block";
+    }
+    else{
+        currSet="none";
+        settings.style.display="none";
+    }
+}
