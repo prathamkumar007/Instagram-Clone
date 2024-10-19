@@ -227,7 +227,9 @@ body,html{
     display: flex;
     gap: 16px;
 }
-
+.left{
+    padding-left: 13vw;
+}
 .like, .comment, .share, .save {
     background: none;
     border: none;
@@ -235,11 +237,12 @@ body,html{
     cursor: pointer;
     display: flex;
     align-items: center;
+    margin: 0px 1vh;
 }
-.like .icon{
+/* .like .icon{
     width: 24px;
     display: none;
-}
+} */
 .like p, .comment p, .share p{
     font-size: 0.9rem;
     margin-left: 4px;
@@ -298,16 +301,16 @@ body,html{
     width: 70%;
     padding: 10px;
     border-radius: 3px;
-    background-color: rgb(247, 243, 243);
-    border: 1px solid rgb(199, 199, 199);
     margin-top: 6vh;
+    background-color: #f5f5f5;
+    border: 1px solid grey;
 }
 .login-modal #password{
     width: 70%;
     padding: 10px;
     border-radius: 3px;
-    background-color: rgb(247, 243, 243);
-    border: 1px solid rgb(199, 199, 199);
+    background-color: #f5f5f5;
+    border: 1px solid grey;
 }
 
 .login-modal .checking{
@@ -365,4 +368,19 @@ body,html{
 }
 .dark-icon{
     display: none;
+}
+.dark-like-icon{
+    display: none;
+    color: white;
+}
+.dark-img{
+    width: 24px;
+    display: none;
+}
+.showDark{
+    color: white;
+    background-color: #262626;
+}
+.inputs-dark{
+    background-color: #1A1A1A;
 }

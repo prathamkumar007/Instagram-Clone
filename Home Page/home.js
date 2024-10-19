@@ -33,25 +33,43 @@ function displayPosts() {
         <div class="img-container">
             <img src="${post.imageUrl}" alt="Post by ${post.username}">
         </div>
-        <div class="feature">
+        <div class="feature light-like-icon">
             <div class="likecommentshare">
                 <button class="like">
-                    <i class="far fa-heart" class="light-icon"></i>
-                    <img src="postLike.png" alt="" class="icon">
+                    <i class="far fa-heart"></i>
                     <p class="post-likes">${post.likes}</p>
                 </button>
                 <button class="comment">
-                    <i class="far fa-comment"></i>
-                    <img src="postComment.png" alt="" class="icon">
+                    <i class="far fa-comment" ></i>
                     <p class="post-likes">${post.comments}</p>
                 </button>
                 <button class="share">
-                    <i class="far fa-paper-plane"></i><p>${post.shares}</p>
+                    <i class="far fa-paper-plane"></i>
+                    <p class="post-likes">${post.shares}</p>
+                </button>
+                <button class="save left">
+                    <i class="far fa-bookmark"></i>
                 </button>
             </div>
-            <button class="save">
-                <i class="far fa-bookmark"></i>
-            </button>
+        </div>
+         <div class="feature dark-like-icon">
+            <div class="likecommentshare">
+                <button class="like">
+                    <img src="darkHeart.png" class="dark-img">
+                    <p class="post-likes">${post.likes}</p>
+                </button>
+                <button class="comment">
+                    <img src="darkMessage.png" class="dark-img">
+                    <p class="post-likes">${post.comments}</p>
+                </button>
+                <button class="share">
+                    <img src="darkShare.png" class="dark-img">
+                    <p class="post-likes">${post.shares}</p>
+                </button>
+                <button class="save left">
+                    <img src="darkSave.png">
+                </button>
+            </div>
         </div>
         <p class="champions"><strong>${post.username}</strong> ${post.caption}</p>
     </div>
