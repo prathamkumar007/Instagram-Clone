@@ -239,10 +239,7 @@ body,html{
     align-items: center;
     margin: 0px 1vh;
 }
-/* .like .icon{
-    width: 24px;
-    display: none;
-} */
+
 .like p, .comment p, .share p{
     font-size: 0.9rem;
     margin-left: 4px;
@@ -405,8 +402,6 @@ body,html{
 }
 hr.hr-settings{
     width: 100%;
-    /* border: 1px solid #DBDBDB80; */
-    /* border: 1px solid #55555580; */
 }
 .more-set{
     display: flex;
@@ -416,9 +411,7 @@ hr.hr-settings{
     cursor: pointer;
     padding-top: 5px;
 }
-/* hr.hr-2{
-    border: 3px solid #DBDBDB4D;
-    /* border: 3px solid #5555554D; */
+
 .dark-set{
     display: none;
 }

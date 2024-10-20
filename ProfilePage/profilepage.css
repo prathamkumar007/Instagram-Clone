@@ -85,6 +85,10 @@ button{
     cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.thread-btn{
+    display: flex;
+    gap: 5px;
+}
 .threads-account img{
     width: 1vw;
     height: 1vw;
@@ -142,7 +146,6 @@ a{
     display: flex;
     justify-content: center;
     gap: 20px;
-    line-height: 2;
     margin-top: 2vh;
     text-align: center;
 }
@@ -152,8 +155,13 @@ a{
     font-weight: 600;
     cursor: pointer;
 }
+.Posts{
+    display: flex;
+    gap: 10px;
+}
 .share img{
-    width: 1.5vw;
+    width: 1vw;
+    height: 2vh;
 }
 .share-2{
     margin-top: 5vw;
@@ -162,7 +170,8 @@ a{
 }
 .share-2 img{
     width: 5vw;
-    padding: 1vw;
+    height: 10vh;
+    padding: 1vh;
     border: 2px solid black ;
     border-radius: 50%;
     cursor: pointer;
@@ -220,6 +229,101 @@ button:hover{
 .namelogo{
     font-weight: 100;
     font-size: 1.9vw;
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.light{
+    background-color: white;
+    color: black;
+}
+.dark-icon{
+    display: none;
+}
+.dark-like-icon{
+    display: none;
+    color: white;
+}
+.dark-img{
+    width: 24px;
+    display: none;
+}
+.more-settings{
+    line-height: 55px;
+    font-size: 2vh;
+    font-weight: 400;
+    width: 40vh;
+    height: auto;
+    display: none;  
+    top: 20%;
+    left: 1%;
+    position: fixed;
+    z-index: 500;
+    background-color: white;
+    box-shadow: 1px 1px 10px 2px rgb(0, 0, 0, 0.5);
+    border-radius: 1vh;
+}
+.more-settings img{
+    width: 1.1vw;
+    height: 2.2vh;
+}
+hr.hr-settings{
+    width: 100%;
+}
+.more-set{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 1vw;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.dark-set{
+    display: none;
+}
+hr.hr-settings{
+    width: 100%;
+}
+.insta-settings{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 53vh;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+hr{
+    width: 100%;
+    border: 1px solid rgb(51, 51, 51);
+}
+.dimmed {
+    background-color: rgba(0, 0, 0, 0.91);
+}
+.modal-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    pointer-events: none;
+}
+.insta-settings button{
+    width: 100%;
+    border-radius: 0;
+    background-color: rgb(35, 35, 35);
+    color: #F5F5F5;
+    padding: 2vh;
+    font-weight: 500;
+    cursor: pointer;
 }
 @media (max-width:800px){
     .navbar p{

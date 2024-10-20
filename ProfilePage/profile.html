@@ -28,31 +28,38 @@
                 </div>
                 <div class="nav-topics">
                     <div class="home topics">
-                        <img src="/Images/hut.png" alt="">
+                        <img src="/Images/hut.png" alt="" class="light-icon">
+                        <img src="/Home Page/darkHome.png" alt="" class="dark-icon">
                         <p onclick="home()">Home</p>
                     </div>
                     <div class="search topics">
-                        <img src="/Images/search.png" alt="">
+                        <img src="/Images/search.png" alt="" class="light-icon">
+                        <img src="/Home Page/darkSearch.png" alt="" class="dark-icon">
                         <p>Search</p>
                     </div>
                     <div class="explore topics">
-                        <img src="/Images/compass.png" alt="">
+                        <img src="/Images/compass.png" alt="" class="light-icon">
+                        <img src="/Home Page/darkExplore.png" alt="" class="dark-icon">
                         <p>Explore</p>
                     </div>
                     <div class="reels topics">
-                        <img src="/Images/reels.png" alt="">
+                        <img src="/Images/reels.png" alt="" class="light-icon">
+                        <img src="/Home Page/darkReel.png" alt="" class="dark-icon">
                         <p>Reels</p>
                     </div>
                     <div class="message topics">
-                        <img src="/Images/messenger.png" alt="">
+                        <img src="/Images/messenger.png" alt="" class="light-icon">
+                        <img src="/Home Page/darkMessage.png" alt="" class="dark-icon">
                         <p>Messages</p>
                     </div>
                     <div class="notifications topics">
-                        <img src="/Images/notification.png" alt="">
+                        <img src="/Images/notification.png" alt="" class="light-icon">
+                        <img src="/Home Page/darkHeart.png" alt="" class="dark-icon">
                         <p>Notifications</p>
                     </div>
                     <div class="create topics">
-                        <img src="/Images/tab.png" alt="">
+                        <img src="/Images/tab.png" alt="" class="light-icon">
+                        <img src="/Home Page/darkCreate.png" alt="" class="dark-icon">
                         <p>Create</p>
                     </div>
                     <div class="profile topics">
@@ -61,13 +68,49 @@
                     </div>
                 </div>
                 <div class="nav-threads topics">
-                    <img src="/Images/threads.png" alt="">
-                    <p>Threads
-                    <p>
+                    <img src="/Images/threads.png" alt="" class="light-icon">
+                    <img src="/Home Page/darkThreads.png" alt="" class="dark-icon">
+                    <p>Threads<p>
+                </div>
+                <div class="more-settings">
+                    <div class="more-set">
+                        <img src="/Home Page/darkSettings.png" alt="" class="dark-set">
+                        <img src="/Home Page/settings.png" alt="" class="light-set">
+                        <p>Settings</p>
+                    </div>
+                    <div class="more-set">
+                        <img src="/Home Page/darkActivity.png" alt="" class="dark-set">
+                        <img src="/Home Page/activity.png" alt="" class="light-set">
+                        <p>Your activity</p>
+                    </div>
+                    <div class="more-set">
+                        <img src="/Home Page/dark-save-instagram.png" alt="" class="dark-set">
+                        <img src="/Images/save-instagram.png" alt="" class="light-set">
+                        <p>Saved</p>
+                    </div>
+                    <div class="more-set">
+                        <img src="/Home Page/darkMoon.png" alt="" class="dark-set">
+                        <img src="/Home Page/sun.png" alt="" class="light-set">
+                        <p id="darkMode">Switch appearance</p>
+                    </div>
+                    <div class="more-set">  
+                        <img src="/Home Page/darkProblem.png" alt="" class="dark-set"> 
+                        <img src="/Home Page/problem.png" alt="" class="light-set">
+                        <p>Report Problem</p>
+                    </div>
+                    <hr class="hr-2" id="hr2">
+                    <div class="more-set">
+                        <p >Switch Accounts</p>
+                    </div>
+                    <hr class="hr-settings" id="hrset">
+                    <div class="more-set">
+                        <p>Log Out</p>
+                    </div>
                 </div>
                 <div class="nav-more topics">
-                    <img src="/Images/menu.png" alt="">
-                    <p>More</p>
+                    <img src="/Images/menu.png" alt="" class="light-icon">
+                    <img src="/Home Page/darkMenu.png" alt="" class="dark-icon">
+                    <p onclick="Settings()">More</p>
                 </div>
             </div>
             <div class="users-profile">
@@ -87,7 +130,7 @@
                         <div class="new">
                             <a href="#">
                                 <img src="/Images/add.png" alt="">
-                                <p>New</p>
+                                <p class="new1">New</p>
                             </a>
                         </div>
                     </div>
@@ -97,13 +140,14 @@
                                 <p>_ppratham_kumar</p>
                             </div>
                             <div class="edit">
-                                <button>Edit Profile</button>
+                                <button class="edit-btn">Edit Profile</button>
                             </div>
                             <div class="View">
-                                <button>View archive</button>
+                                <button class="view-btn">View archive</button>
                             </div>
-                            <div>
-                                <img src="/Images/black-settings-button.png" alt="">
+                            <div style="cursor: pointer;">
+                                <img src="/Images/black-settings-button.png" alt="" class="light-set" onclick="toggleSettings()">
+                                <img src="/Home Page/darkSettings.png" alt="" class="dark-set" onclick="toggleSettings()">
                             </div>
                         </div>
 
@@ -141,12 +185,36 @@
                                 <h3>Pratham Kumar</h3>
                             </div>
                             <div class="threads-account">
-                                <button>
-                                    <img src="/Images/threads.png" alt="" class="thread-img">
-                                    _ppratham_kumar</button>
+                                <button class="thread-btn">
+                                    <img src="/Images/threads.png" alt="" class="thread-img light-set">
+                                    <img src="/Home Page/darkThreads.png" alt="" class="dark-set">
+                                    <div class="thread-p">
+                                        _ppratham_kumar
+                                    </div>
+                                </button>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="modal-background" id="modalBackground"></div>
+                <div class="insta-settings" id="insta-setting">
+                    <div class="features">
+                        <button>Apps and websites</button>
+                        <hr>
+                            <button>QR code</button>
+                        <hr>
+                            <button>Notifications</button>
+                        <hr>
+                            <button>Settings and privacy</button>
+                        <hr>
+                            <button>Supervision</button>
+                        <hr>
+                            <button>Login activity</button>
+                        <hr>
+                            <button>Log Out</button>
+                        <hr>
+                            <button onclick="cancel()">Cancel</button>
+                    </div>    
                 </div>
                 <div class="numbers">
                     <div class="posts">
@@ -166,23 +234,26 @@
                 <div class="share">
                     <div class="share-1">
                         <div class="Posts">
-                            <img src="/Images/profile.png" alt="">
-                            <p>POSTS</p>
+                            <img src="/Images/profile.png" alt="" class="light-set">
+                            <img src="darkProfile.png" alt="" class="dark-set">
+                            <p class="share-p">POSTS</p>
                         </div>
 
                         <div class="Posts">
-                            <img src="/Images/save-instagram.png" alt="">
-                            <p>SAVED</p>
+                            <img src="/Images/save-instagram.png" alt="" class="light-set">
+                            <img src="/Home Page/darkSave.png" alt="" class="dark-set">
+                            <p class="share-p">SAVED</p>
                         </div>
 
                         <div class="Posts">
-                            <img src="/Images/comment.png" alt="">
-                            <p>TAGGED</p>
+                            <img src="/Images/comment.png" alt="" class="light-set">
+                            <img src="darkTag.png" alt="" class="dark-set">
+                            <p class="share-p">TAGGED</p>
                         </div>
 
                     </div>
                     <div class="share-2">
-                        <img src="/Images/camera.png" alt="">
+                        <img src="/Images/camera.png" alt="camera">
                         <h2>Share Photos</h2>
                         <p>When you share photos,they will appear on your profile</p>
                         <p><a href="#">Share your first photo</a></p>
@@ -207,26 +278,26 @@
                     </div>
                     <div class="languages">
                         <select name="languages" id="languages">
-                            <option value="en">English</option>
-                            <option value="zh">中文 (Chinese)</option>
-                            <option value="es">Español (Spanish)</option>
-                            <option value="hi">हिन्दी</option>
-                            <option value="ar">العربية (Arabic)</option>
-                            <option value="pt">Português (Portuguese)</option>
-                            <option value="bn">বাংলা (Bengali)</option>
-                            <option value="ru">Русский (Russian)</option>
-                            <option value="ja">日本語 (Japanese)</option>
-                            <option value="de">Deutsch (German)</option>
-                            <option value="fr">Français (French)</option>
-                            <option value="ko">한국어 (Korean)</option>
-                            <option value="it">Italiano (Italian)</option>
-                            <option value="vi">Tiếng Việt (Vietnamese)</option>
-                            <option value="tr">Türkçe (Turkish)</option>
-                            <option value="ta">தமிழ் (Tamil)</option>
-                            <option value="fa">فارسی (Persian)</option>
-                            <option value="pl">Polski (Polish)</option>
-                            <option value="th">ไทย (Thai)</option>
-                            <option value="ur">اردو (Urdu)</option>
+                            <option value="en" class="lang">English</option>
+                            <option value="zh" class="lang">中文 (Chinese)</option>
+                            <option value="es" class="lang">Español (Spanish)</option>
+                            <option value="hi" class="lang">हिन्दी</option>
+                            <option value="ar" class="lang">العربية (Arabic)</option>
+                            <option value="pt" class="lang">Português (Portuguese)</option>
+                            <option value="bn" class="lang">বাংলা (Bengali)</option>
+                            <option value="ru" class="lang">Русский (Russian)</option>
+                            <option value="ja" class="lang">日本語 (Japanese)</option>
+                            <option value="de" class="lang">Deutsch (German)</option>
+                            <option value="fr" class="lang">Français (French)</option>
+                            <option value="ko" class="lang">한국어 (Korean)</option>
+                            <option value="it" class="lang">Italiano (Italian)</option>
+                            <option value="vi" class="lang">Tiếng Việt (Vietnamese)</option>
+                            <option value="tr" class="lang">Türkçe (Turkish)</option>
+                            <option value="ta" class="lang">தமிழ் (Tamil)</option>
+                            <option value="fa" class="lang">فارسی (Persian)</option>
+                            <option value="pl" class="lang">Polski (Polish)</option>
+                            <option value="th" class="lang">ไทย (Thai)</option>
+                            <option value="ur" class="lang">اردو (Urdu)</option>
                         </select>
                         <div class="copy">© 2024 Instagram from Meta</div>
                     </div>
