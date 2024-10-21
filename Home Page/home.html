@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <div class="navbar">
@@ -18,7 +20,7 @@
                 <div class="home topics">
                     <img src="/Images/hut.png" alt="" class="light-icon">
                     <img src="darkHome.png" alt="" class="dark-icon">
-                    <p>Home</p>
+                    <p onclick="home()">Home</p>
                 </div>
                 <div class="topics">
                     <img src="/Images/search.png" alt="" class="light-icon">
@@ -33,7 +35,7 @@
                 <div class="reels topics">
                     <img src="/Images/reels.png" alt="" class="light-icon">
                     <img src="darkReel.png" alt="" class="dark-icon">
-                    <p>Reels</p>
+                    <p onclick="reels()">Reels</p>
                 </div>
                 <div class="message topics">
                     <img src="/Images/messenger.png" alt="" class="light-icon">
@@ -46,7 +48,7 @@
                     <p>Notifications</p>
                 </div>
                 <div class="create topics">
-                    <img src="/Images/tab.png" alt=""class="light-icon">
+                    <img src="/Images/tab.png" alt="" class="light-icon">
                     <img src="darkCreate.png" alt="" class="dark-icon">
                     <p>Create</p>
                 </div>
@@ -81,14 +83,14 @@
                     <img src="sun.png" alt="" class="light-set">
                     <p id="darkMode">Switch appearance</p>
                 </div>
-                <div class="more-set">  
-                    <img src="darkProblem.png" alt="" class="dark-set"> 
+                <div class="more-set">
+                    <img src="darkProblem.png" alt="" class="dark-set">
                     <img src="problem.png" alt="" class="light-set">
                     <p>Report Problem</p>
                 </div>
                 <hr class="hr-2" id="hr2">
                 <div class="more-set">
-                    <p >Switch Accounts</p>
+                    <p>Switch Accounts</p>
                 </div>
                 <hr class="hr-settings" id="hrset">
                 <div class="more-set">
@@ -97,7 +99,7 @@
             </div>
             <div class="nav-more topics">
                 <img src="/Images/menu.png" alt="" class="light-icon">
-                <img src="darkMenu.png" alt="" class="dark-icon">   
+                <img src="darkMenu.png" alt="" class="dark-icon">
                 <p onclick="Settings()">More</p>
             </div>
         </div>
@@ -106,7 +108,36 @@
 
             <div class="posts"></div>
         </div>
-       
+        <div class="reels-container">
+            <div class="reels_videos">
+                <div class="video">
+                    <video src="Video-216.mp4" playsinline></video>
+                    <div class="top">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="icons">
+                        <div>
+                            <i class="far fa-heart"></i>
+                            <small>5M</small>
+                        </div>
+                        <div>
+                            <i class="far fa-comment"></i>
+                            <small>36k</small>
+                        </div>
+                        <i class="far fa-paper-plane"></i>
+                        <img src="/Images/menu.png" alt="" width="20px" height="20px">
+                        <img src="/Home Page/indianct.jpg" alt="" width="20px" height="20px" class="profile-pic">
+                    </div>
+                    <div class="user_profile">
+                        <div>
+                            <img src="/Home Page/indianct.jpg" alt="" class="profile-pic">
+                            <h4>indiancricketteam</h4>
+                            <button>Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="contacts">
             <div class="username">
                 <img src="/Images/user.png" alt"">
@@ -159,17 +190,17 @@
                 </div>
                 <div class="copy">© 2024 Instagram from Meta</div>
             </div>
-            
+
         </div>
         <div class="footer2">
             <div class="home1">
-                <img src="/Images/hut.png" alt="">
+                <img src="/Images/hut.png" alt="" onclick="home()">
             </div>
             <div class="explore1">
                 <img src="/Images/compass.png" alt="">
             </div>
             <div class="reels1">
-                <img src="/Images/reels.png" alt="">
+                <img src="/Images/reels.png" alt="" onclick="reels()">
             </div>
             <div class="create1">
                 <img src="/Images/tab.png" alt="">
@@ -188,6 +219,7 @@
     <script src="profile.js"></script>
     <script src="stories.js"></script>
     <script src="darkMode.js"></script>
+    <script src="reels.js"></script>
 </body>
 
 </html>

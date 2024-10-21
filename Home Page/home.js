@@ -116,3 +116,14 @@ function Settings(){
         settings.style.display="none";
     }
 }
+
+function reels(){
+    document.querySelector('.stories').style.display="none";
+    document.querySelector('.contacts').style.display="none";
+    document.querySelector('.reels-container').style.display="block";
+}
+function home(){
+    document.querySelector('.stories').style.display="block";
+    document.querySelector('.contacts').style.display="block";
+    document.querySelector('.reels-container').style.display="none";
+}
