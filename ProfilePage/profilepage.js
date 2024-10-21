@@ -34,10 +34,19 @@ function displayDarkMode() {
         });
         document.querySelectorAll('.share-p').forEach(sharep=>{
           sharep.style.color=currMode==="dark"? "#A8A8A8":"rgb(115,115,115)";
-      });
+        });
+        document.querySelectorAll('.features-btn').forEach(featurebtn=>{
+          featurebtn.style.backgroundColor=currMode==="dark"? "#262626":"white";
+          featurebtn.style.color=currMode==="dark"? "white":"black";
+          featurebtn.style.fontWeight=currMode==="dark"? "400":"400";
+        });
+        document.querySelectorAll('.hr3').forEach(hr3=>{
+          hr3.style.border=currMode==="dark"? "1px solid rgb(51,51,51)":"1px solid #DBDBDB80";
+        });
       }
     const hr1=document.getElementById('hr2');
     const hr2=document.getElementById('hrset');
+
     function applyMode(){
       if (currMode === "dark") {
         body.classList.add("dark");
@@ -54,6 +63,9 @@ function displayDarkMode() {
         document.querySelector('#languages').style.backgroundColor="black";
         document.querySelector('.about').style.color="#A8A8A8";
         document.querySelector('.new1').style.color="white";
+        document.querySelector('.insta-settings').style.backgroundColor="#262626";
+        document.body.classList.add('dimmed1');
+        document.body.classList.remove('dimmed2');
       } 
       else {
         body.classList.add("light");
@@ -70,6 +82,9 @@ function displayDarkMode() {
         document.querySelector('#languages').style.backgroundColor="white";
         document.querySelector('.about').style.color="rgb(115,115,115)";
         document.querySelector('.new1').style.color="black";
+        document.querySelector('.insta-settings').style.backgroundColor="white";
+        document.body.classList.remove('dimmed1');
+        document.body.classList.add('dimmed2');
       }
       updateIcons();
     }
@@ -90,17 +105,16 @@ function toggleSettings(){
   if(modal.style.display==='block'){
     modal.style.display='none';
     background.style.display='none';
-    body.classList.remove('dimmed');
+    body.classList.remove('dimmed1');
   }
   else{
     modal.style.display='block';
     background.style.display='block';
-    body.classList.add('dimmed');
+    body.classList.add('dimmed1');
   }
 }
 function cancel(){
   const body=document.body;
   document.querySelector('.insta-settings').style="display:none"
-  body.classList.remove('dimmed');
-
+  body.classList.remove('dimmed1');
 }

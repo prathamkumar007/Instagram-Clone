@@ -41,6 +41,9 @@ function displayDarkMode() {
       document.getElementById('username').style = "border: none; background-color: #1a1a1a; color:white";
       document.getElementById('password').style = "border: none; background-color: #1a1a1a; color:white";
       document.querySelector('.more-settings').style.backgroundColor="#262626";
+      document.querySelector('.loginbutton').style.border="none";
+      document.querySelector('.loginbutton').style.backgroundColor="#0095F6";
+      document.querySelector('.forgp').style.color="white";
       hr1.style.border="3px solid #5555554D";
       hr2.style.border="1px solid #55555580";
     } 
@@ -53,6 +56,8 @@ function displayDarkMode() {
       document.getElementById('username').style = "border: 1px solid grey; background-color: #f5f5f5";
       document.getElementById('password').style = "border: 1px solid grey; background-color: #f5f5f5";
       document.querySelector('.more-settings').style.backgroundColor="white";
+      // document.querySelector('.loginbutton').style.backgroundColor=rgb(59, 191, 244);
+      document.querySelector('.forgp').style.color="rgb(0,55,107)";
       hr1.style.border="3px solid #DBDBDB4D";
       hr2.style.border="1px solid #DBDBDB80";
     }
