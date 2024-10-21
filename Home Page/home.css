@@ -66,7 +66,7 @@ body,html{
 .insta-story{
     margin-top: 4vh;
     display: flex;
-    width: 58vw;
+    width: 45vw;
     justify-content: space-evenly;
 }
 .all-story{
@@ -197,6 +197,7 @@ body,html{
     margin-bottom: 5vh;
     border: 1px solid black;
     border-radius: 8px;
+    margin-right: 10%;
 }
 .name {
     display: flex;
@@ -448,6 +449,7 @@ hr.hr-settings{
         max-width: 100%;
         margin-bottom: 3vh;
       }
+    
       .img-container {
         width: 100%;
         margin-top: 1vh;
@@ -479,28 +481,89 @@ hr.hr-settings{
         width: 12px;
         height: 12px;
       }
-      .insta-story{
-        margin-top: 4vh;
-        width: 100px;
-        gap: 10px;
-    }   
-    .user-story{
-        margin-left: 1.3vw;
-        font-size: 0.9rem;
-        font-weight: 400;
+}
+@media(max-width:800px){
+    .nav-topics p{
+        display: none;
     }
-    .story1{
-        width: 15vw;
-        height: 7vh;
+    .nav-topics h3{
+        display: none;
     }
-    .back{
+    .nav-logo h2{
+        display: none;
+    }
+    .nav-logo img{
+        display: block;
+    }
+    .nav-logo{
         display: flex;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
         justify-content: center;
         align-items: center;
-        width: 16vw;
-        height: 7.5vh;
-        background: linear-gradient(240deg, rgb(249, 1, 42),rgb(247, 10, 247), rgb(252, 12, 52), yellow, orange );
-        border-radius: 50%;
     }
+    .navbar{
+        width: 10%;
+    }
+    .nav-threads{
+        display: none;
+    }
+    .nav-more{
+        display: none;
+    }   
+    .nav-topics{
+        margin-bottom: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 3vh    ;
+    }
+    .navbar img{
+        width: 1.2rem;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+    .contacts{
+        display: none;
+    }
+    .stories{
+        width: 100%;
+    }
+    .post1 {
+        max-width: 100%;
+        margin-bottom: 3vh;
+      }
     
+      .img-container {
+        width: 100%;
+        margin-top: 1vh;
+      }
+    
+      .left {
+        padding-left: 5vw;
+      }
+    
+      .likecommentshare {
+        gap: 8px;
+      }
+    
+      .like, .comment, .share, .save {
+        font-size: 1.2rem;
+        margin: 0px 0.5vh;
+      }
+    
+      .like p, .comment p, .share p {
+        font-size: 0.8rem;
+      }
+    
+      .name .indiact {
+        width: 24px;
+        height: 24px;
+      }
+    
+      .name .tick {
+        width: 12px;
+        height: 12px;
+      }
 }
