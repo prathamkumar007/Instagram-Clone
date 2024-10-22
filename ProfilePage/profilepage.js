@@ -1,5 +1,5 @@
 function home(){
-    window.location.href="../Home Page/home.html";
+    window.location.href="../Home Page/index.html";
 }
 
 let currSet="none";
