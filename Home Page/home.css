@@ -64,19 +64,27 @@ body,html{
     align-items: center;
 }
 .insta-story{
-    margin-top: 4vh;
     display: flex;
-    width: 45vw;
+    width: 46vw;
     justify-content: space-evenly;
+    gap: 15px;
+    padding-top: 13vh;
+    scrollbar-width: none;
+    overflow-x: auto;
+    align-items: end;
+    margin-top: 3vh;  
+}
+.insta-story::-webkit-scrollbar {
+    display: none;
 }
 .all-story{
     display: flex;
     flex-direction: column;
 }
 .user-story{
-    margin-left: 1.3vw;
     font-size: 0.9rem;
     font-weight: 400;
+    text-align: center;
 }
 .story1{
     width: 4.5vw;
@@ -143,7 +151,7 @@ body,html{
     display: flex;
 }
 .suggestion-1 a{
-    margin-left: 6.1vw;
+    margin-left: 5vw;
     font-size: 12px;
 }
  .suggestion-1 .following{
@@ -190,7 +198,7 @@ body,html{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 10vh;
+    margin-top: 8vh;
 }
 .post1 {
     max-width: 600px;
@@ -247,14 +255,17 @@ body,html{
 }
 
 .img-container{
-    width: 36vw;
+    width: 100%;
+    max-width: 600px;
     margin-top: 2vh;
     border-radius: 5px;
+    overflow: hidden; 
 }
 .img-container img{
     width: 100%;
-    border-radius: 5px;
+    height: auto;
     object-fit: cover;
+    border-radius: 5px;
 }
 .champions {
     padding: 0 12px 12px;
@@ -424,10 +435,11 @@ hr.hr-settings{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    height: 100vh;
     display: none;
-    margin-top: 100vh;
+    scrollbar-width: none;
+    overflow-y: auto;
+    margin-bottom: 3vh;
 }
 .reels-container .reels_videos {
     position: relative;
@@ -437,7 +449,7 @@ hr.hr-settings{
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 .video {
     width: 100%;
@@ -534,6 +546,10 @@ hr.hr-settings{
     cursor: pointer;
     user-select: none;
 }   
+.topics:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+} 
 @media (max-width:550px){
     .navbar{
         display: none;
@@ -560,27 +576,43 @@ hr.hr-settings{
     .stories{
         width: 100%;
     }
+    .insta-story{
+        width: 60vw;
+        gap: 20px;
+    }
+    .story1 img{
+        width: 50px;
+        height: 50px;
+    }
+    .back{
+        width: 100px;
+        height: 60px;
+    }
     .post1 {
-        max-width: 100%;
-        margin-bottom: 3vh;
-      }
-    
-      .img-container {
         width: 100%;
-        margin-top: 1vh;
       }
+    .post-image{
+        width: 100%;
+        height: auto;
+    }
+    .img-container {
+        width: 100%;
+        overflow: hidden;
+    }
     
       .left {
         padding-left: 5vw;
       }
     
       .likecommentshare {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         gap: 8px;
       }
     
       .like, .comment, .share, .save {
-        font-size: 1.2rem;
-        margin: 0px 0.5vh;
+        font-size: 1rem
       }
     
       .like p, .comment p, .share p {
@@ -645,7 +677,7 @@ hr.hr-settings{
     .contacts{
         display: none;
     }
-    .stories{
+    /* .stories{
         width: 100%;
     }
     .post1 {
@@ -683,5 +715,47 @@ hr.hr-settings{
       .name .tick {
         width: 12px;
         height: 12px;
-      }
+      } */
+      .posts {
+        display: flex;
+        flex-direction: column; /* Stack posts vertically */
+        align-items: center; /* Center align posts */
+        margin: 0; /* Remove margins */
+        padding: 0 10px; /* Add some padding */
+    }
+
+    .post1 {
+        max-width: 90%; /* Make posts full width */
+        width: 90%;
+        margin-bottom: 20px; /* Space between posts */
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px; /* Optional: Rounded corners */
+    }
+
+    .img-container {
+        width: 100%; /* Make images full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .likecommentshare {
+        justify-content: center; /* Center align icons */
+    }
+
+    .like, .comment, .share, .save {
+        font-size: 1.2rem; /* Adjust icon size */
+    }
+
+    .name .indiact {
+        width: 30px; /* Smaller DP for mobile */
+        height: 30px; /* Smaller DP for mobile */
+    }
+
+    .name .tick {
+        width: 12px; /* Adjust tick size */
+        height: 12px; /* Adjust tick size */
+    }
+
+    .champions {
+        font-size: 0.9rem; /* Smaller font for captions */
+    }   
 }

@@ -1,26 +1,48 @@
-const reelsContainer = document.querySelector('.reels-container');
+const reelsContainer = document.querySelector(".reels-container");
 
 function displayReels() {
-    const reels = [
-        {   userDp:"cr7dp.jpg",
-            username: "cristiano",
-            like: "4.9M",
-            comment: "89.8k",
-            video: "Video-66.mp4",
-        },
-        {
-            userDp:"indianct.jpg",
-            username: "indiancricketeam",
-            like: "5M",
-            comment: "36k",
-            video: "Video-216.mp4",
-        }
-    ];
+  const reels = [
+    {
+      userDp: "cr7dp.jpg",
+      username: "cristiano",
+      like: "4.9M",
+      comment: "89.8k",
+      video: "Video-66.mp4",
+    },
+    {
+      userDp: "indianct.jpg",
+      username: "indiancricketeam",
+      like: "5M",
+      comment: "36k",
+      video: "Video-216.mp4",
+    },
+    {
+      userDp: "anime.jpg",
+      username: "_the_animefan",
+      like: "100k",
+      comment: "278",
+      video: "Video-99.mp4",
+    },
+    {
+        userDp: "sekiro.jpg",
+        username: "sekiro_editzz",
+        like: "50k",
+        comment: "649",
+        video: "Video-169.mp4",
+    },
+    {
+        userDp: "nature.jpg",
+        username: "swiss.beautifuls",
+        like: "176k",
+        comment: "1,057",
+        video: "Video-11.mp4",
+    },
+  ];
 
-    let reelhtml = "";
+  let reelhtml = "";
 
-    reels.forEach(reel => {
-        reelhtml += `
+  reels.forEach((reel) => {
+    reelhtml += `
             <div class="reels_videos">
                 <div class="video">
                     <video src="${reel.video}" playsinline></video>
@@ -49,33 +71,37 @@ function displayReels() {
                     </div>
                 </div>
             </div>`;
-    });
+  });
 
-    reelsContainer.innerHTML = reelhtml;
+  reelsContainer.innerHTML = reelhtml;
 }
 displayReels();
 
 let currentlyPlayingVideo = null;
 
-reelsContainer.addEventListener('click', (event) => {
-    const videoElement = event.target.closest('.video')?.querySelector('video');
+reelsContainer.addEventListener("click", (event) => {
+  const videoElement = event.target.closest(".video")?.querySelector("video");
 
-    // Ignore clicks on the icons or buttons
-    if (!videoElement || event.target.closest('.icons') || event.target.closest('button')) {
-        return;
-    }
+  // Ignore clicks on the icons or buttons
+  if (
+    !videoElement ||
+    event.target.closest(".icons") ||
+    event.target.closest("button")
+  ) {
+    return;
+  }
 
-    // Pause currently playing video if it's different from the one clicked
-    if (currentlyPlayingVideo && currentlyPlayingVideo !== videoElement) {
-        currentlyPlayingVideo.pause();
-    }
+  // Pause currently playing video if it's different from the one clicked
+  if (currentlyPlayingVideo && currentlyPlayingVideo !== videoElement) {
+    currentlyPlayingVideo.pause();
+  }
 
-    // Toggle play/pause on the clicked video
-    if (videoElement.paused) {
-        videoElement.play();
-        currentlyPlayingVideo = videoElement;
-    } else {
-        videoElement.pause();
-        currentlyPlayingVideo = null;
-    }
+  // Toggle play/pause on the clicked video
+  if (videoElement.paused) {
+    videoElement.play();
+    currentlyPlayingVideo = videoElement;
+  } else {
+    videoElement.pause();
+    currentlyPlayingVideo = null;
+  }
 });

@@ -18,6 +18,33 @@ function displayPosts() {
         shares: "60.8K",
         caption: "😎 🇵🇹",
     },
+    {
+        username: "leomessi",
+        userDp: "leodp.jpg",
+        imageUrl: "leomessi.jpg",
+        likes: "9M",
+        comments: "80K",
+        shares: "70.8K",
+        caption: "Una más… 🏆🏆",
+    },
+    {
+        username: "virat.kohli",
+        userDp: "viratDp.jpg",
+        imageUrl: "viratkohli.jpg",
+        likes: "6.7M",
+        comments: "52.5K",
+        shares: "30K",
+        caption: "Big cat energy 🐈‍⬛ ​",
+    },
+    {
+        username: "kendalljenner",
+        userDp: "kendallDp.jpg",
+        imageUrl: "kendall.jpg",
+        likes: "2.1M",
+        comments: "6,469",
+        shares: "20K",
+        caption: "9pm sunsets 🐙​",
+    },
   ];
 
   const postElement = document.querySelector(".posts");
@@ -31,7 +58,7 @@ function displayPosts() {
             <img src="tick.png" alt="Verified tick" class="tick">
         </div>
         <div class="img-container">
-            <img src="${post.imageUrl}" alt="Post by ${post.username}">
+            <img src="${post.imageUrl}" alt="Post by ${post.username}" class="post-image">
         </div>
         <div class="feature light-like-icon">
             <div class="likecommentshare">
@@ -126,4 +153,9 @@ function home(){
     document.querySelector('.stories').style.display="block";
     document.querySelector('.contacts').style.display="block";
     document.querySelector('.reels-container').style.display="none";
+    document.querySelector('.stories').style = "margin-left: 15%";
+}
+
+function logout(){
+    window.location.href="../Login Page/login.html";
 }
