@@ -427,6 +427,7 @@ hr.hr-settings{
     min-height: 100vh;
     padding: 20px;
     display: none;
+    margin-top: 100vh;
 }
 .reels-container .reels_videos {
     position: relative;
@@ -436,15 +437,14 @@ hr.hr-settings{
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    margin-top: 5vh;
 }
-
-.reels-container .reels_videos .video {
+.video {
     width: 100%;
     height: 100%;
     position: relative;
 }
-
-.reels-container .reels_videos .video video {
+.video video {
     position: absolute;
     top: 0;
     left: 0;
@@ -452,7 +452,7 @@ hr.hr-settings{
     height: 100%;
     object-fit: cover;
 }
-.reels-container .reels_videos .video .top {
+.video .top {
     position: absolute;
     top: 15px;
     left: 0;
@@ -462,25 +462,17 @@ hr.hr-settings{
     padding: 0 15px;
     color: #fff;
 }
-
-.reels-container .reels_videos .video .top div {
+.top div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
-.reels-container .reels_videos .video .top h4 {
-    color: #fff;
-    letter-spacing: 0.3px;
-    font-weight: 500;
-}
-
-.reels-container .reels_videos .video .top i {
+.top i {
     font-size: 20px;
     user-select: none;
     cursor: pointer;
 }
-.reels-container .reels_videos .video .icons {
+.video .icons {
     position: absolute;
     bottom: 15px;
     right: 10px;
@@ -490,44 +482,44 @@ hr.hr-settings{
     color: #fff;
 }
 
-.reels-container .reels_videos .video .icons i {
+.video .icons i {
     font-size: 20px;
     cursor: pointer;
 }
 
-.reels-container .reels_videos .video .icons .profile-pic {
+.icons .profile-pic {
     width: 35px;
     height: 35px;
-    border-radius: 10px;
-    box-shadow: 0 0 0 4px #fff;
+    border-radius: 100%;
 }
-.reels-container .reels_videos .video .user_profile {
+.user_profile {
     position: absolute;
     bottom: 60px;
     left: 10px;
     color: #fff;
     width: 90%;
     overflow: visible;
+    font-size: 1rem;
+    font-weight: 100;
 }
 
-.reels-container .reels_videos .video .user_profile .profile-pic {
+.user_profile .profile-pic {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
 }
-
-.reels-container .reels_videos .video .user_profile div {
+.user_profile div {
     display: flex;
     align-items: center;
 }
 
-.reels-container .reels_videos .video .user_profile h4 {
+.user_profile h4 {
     letter-spacing: 0.3px;
     margin-right: 15px;
 }
 
-.reels-container .reels_videos .video .user_profile button {
+.user_profile button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -603,6 +595,9 @@ hr.hr-settings{
       .name .tick {
         width: 12px;
         height: 12px;
+      }
+      .reels-container{
+        margin-top: 70vh;
       }
 }
 @media(max-width:800px){
