@@ -50,12 +50,12 @@ function displayReels() {
                         <i class="fas fa-camera"></i>
                     </div>
                     <div class="icons">
-                        <div>
+                        <div class="like-container">
                             <i class="far fa-heart"></i>
                             <small>${reel.like}</small>
                         </div>
                         <div>
-                            <i class="far fa-comment"></i>
+                            <i class="far fa-comment "></i>
                             <small>${reel.comment}</small>
                         </div>
                         <i class="far fa-paper-plane"></i>
@@ -81,8 +81,6 @@ let currentlyPlayingVideo = null;
 
 reelsContainer.addEventListener("click", (event) => {
   const videoElement = event.target.closest(".video")?.querySelector("video");
-
-  // Ignore clicks on the icons or buttons
   if (
     !videoElement ||
     event.target.closest(".icons") ||
@@ -91,17 +89,30 @@ reelsContainer.addEventListener("click", (event) => {
     return;
   }
 
-  // Pause currently playing video if it's different from the one clicked
   if (currentlyPlayingVideo && currentlyPlayingVideo !== videoElement) {
     currentlyPlayingVideo.pause();
   }
-
-  // Toggle play/pause on the clicked video
   if (videoElement.paused) {
     videoElement.play();
     currentlyPlayingVideo = videoElement;
   } else {
     videoElement.pause();
     currentlyPlayingVideo = null;
+  }
+});
+reelsContainer.addEventListener("click", (event) => {
+  const likeIcon = event.target.closest(".like-container");
+  if (likeIcon) {
+    const heart = likeIcon.querySelector("i");
+    heart.classList.toggle("fas");
+    heart.classList.toggle("far");
+
+    if (heart.classList.contains("fas")) {
+      heart.style.fontSize = "20px";
+      heart.style.color = "red";
+    } else {
+      heart.style.fontSize = "20px";
+      heart.style.color = "";
+    }
   }
 });

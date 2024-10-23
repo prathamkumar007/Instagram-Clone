@@ -239,6 +239,10 @@ body,html{
 .left{
     padding-left: 13vw;
 }
+.like img{
+    width: 24px;
+    height: 24px;
+}
 .like, .comment, .share, .save {
     background: none;
     border: none;
@@ -247,8 +251,11 @@ body,html{
     display: flex;
     align-items: center;
     margin: 0px 1vh;
+    transition: transform 0.2s;
 }
-
+.like:hover, .comment:hover, .share:hover, .save:hover {
+    transform: scale(1.1);
+}
 .like p, .comment p, .share p{
     font-size: 0.9rem;
     margin-left: 4px;

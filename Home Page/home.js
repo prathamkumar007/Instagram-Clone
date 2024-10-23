@@ -34,7 +34,7 @@ function displayPosts() {
         likes: "6.7M",
         comments: "52.5K",
         shares: "30K",
-        caption: "Big cat energy 🐈‍⬛ ​",
+        caption: "Big cat energy 🐈‍⬛​",
     },
     {
         username: "kendalljenner",
@@ -101,8 +101,39 @@ function displayPosts() {
         <p class="champions"><strong>${post.username}</strong> ${post.caption}</p>
     </div>
     `;
-    postElement.innerHTML = innerHTML;
-  });
+});
+postElement.innerHTML = innerHTML;
+document.querySelectorAll('.like').forEach(button => {
+    button.addEventListener('dblclick', () => {
+        const likeIcon = button.querySelector('i');
+        if (likeIcon.classList.contains('far')) {
+            const redLikeImage = document.createElement('img');
+            redLikeImage.src = 'redlike.png';
+            redLikeImage.style.width = '24px';
+            redLikeImage.style.height = '24px';
+            button.replaceChild(redLikeImage, likeIcon);
+        } else {
+            const originalIcon = document.createElement('i');
+            originalIcon.className = 'far fa-heart';
+            button.replaceChild(originalIcon, button.querySelector('img'));
+        }
+    });
+button.addEventListener('click', () => {
+    const currentLikeImage = button.querySelector('img');
+    if (currentLikeImage) {
+
+        const originalIcon = document.createElement('i');
+        originalIcon.className = 'far fa-heart';
+        button.replaceChild(originalIcon, currentLikeImage);
+    } else {
+        const redLikeImage = document.createElement('img');
+        redLikeImage.src = 'redlike.png';
+        redLikeImage.style.width = '24px';
+        redLikeImage.style.height = '24px';
+        button.replaceChild(redLikeImage, button.querySelector('i'));
+    }
+    });
+});
 }
 displayPosts();
 
