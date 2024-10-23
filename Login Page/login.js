@@ -57,7 +57,7 @@ function validateLogin(event) {
 
     if (user) {
         localStorage.setItem('currentUser', JSON.stringify(user));
-        window.location.href = 'index.html';
+        window.location.href = "../Home Page/index.html";
         return true;
     } else {
         document.getElementById('loginError').textContent = 'Invalid username or password';
