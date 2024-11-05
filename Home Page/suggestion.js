@@ -5,6 +5,11 @@ function displaySuggest(){
       userPic: "/Images/userDp.jpg",
       follow: "abhinav_jindal",
     },
+    {
+      username: "_itz_singh_28",
+      userPic: "/Images/userDp.jpg",
+      follow: "abhinav_jindal",
+    },
 
   ];
 

@@ -48,15 +48,15 @@ function displayStories() {
 
   let storyElement = document.querySelector(".insta-story");
   let storyHtml = "";
-  stories.forEach((story) => {
+  stories.forEach((story) => {  
     storyHtml += `
-        <div class="all-story">
-            <div class="back">
-                <div class="story1">
-                    <img src="${story.userDp}" alt="" class="story1">
+        <div className="all-story">
+            <div className="back">
+                <div className="story1">
+                    <img src="${story.userDp}" alt="" className="story1">
                     </div>
             </div>
-            <div class="user-story">
+            <div className="user-story">
                 <p>${story.username}</p>
             </div>
         </div>`;
