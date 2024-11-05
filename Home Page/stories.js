@@ -1,47 +1,47 @@
 function displayStories() {
   let stories = [
     {
-      userDp: "cr7dp.jpg",
+      userDp: "/Images/cr7dp.jpg",
       username: "cristiano",
     },
     {
-      userDp: "leodp.jpg",
+      userDp: "/Images/leodp.jpg",
       username: "leomessi",
     },
     {
-      userDp: "viratDp.jpg",
+      userDp: "/Images/viratDp.jpg",
       username: "viratkohli",
     },
     {
-      userDp: "rohitdp.jpg",
+      userDp: "/Images/rohitdp.jpg",
       username: "rohitsharma",
     },
     {
-      userDp: "neymardp.jpg",
+      userDp: "/Images/neymardp.jpg",
       username: "neymar",
     },
     {
-      userDp: "rvcinstadp.jpg",
+      userDp: "/Images/rvcinstadp.jpg",
       username: "rvcjinsta",
     },
     {
-      userDp: "realdp.jpg",
+      userDp: "/Images/realdp.jpg",
       username: "realmadrid",
     },
     {
-      userDp: "djokodp.jpg",
+      userDp: "/Images/djokodp.jpg",
       username: "djokernole",
     },
     {
-      userDp: "pldp.jpg",
+      userDp: "/Images/pldp.jpg",
       username: "pleague",
     },
     {
-      userDp: "mudp.png",
+      userDp: "/Images/mudp.png",
       username: "ManUnited",
     },
     {
-      userDp: "alnasserdp.png",
+      userDp: "/Images/alnasserdp.png",
       username: "alnassr",
     },
   ];

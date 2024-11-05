@@ -3,39 +3,39 @@ const reelsContainer = document.querySelector(".reels-container");
 function displayReels() {
   const reels = [
     {
-      userDp: "cr7dp.jpg",
+      userDp: "/Images/cr7dp.jpg",
       username: "cristiano",
       like: "4.9M",
       comment: "89.8k",
-      video: "Video-66.mp4",
+      video: "/Videos/Video-66.mp4",
     },
     {
-      userDp: "indianct.jpg",
+      userDp: "/Images/indianct.jpg",
       username: "indiancricketeam",
       like: "5M",
       comment: "36k",
-      video: "Video-216.mp4",
+      video: "/Videos/Video-216.mp4",
     },
     {
-      userDp: "anime.jpg",
+      userDp: "/Images/anime.jpg",
       username: "_the_animefan",
       like: "100k",
       comment: "278",
-      video: "Video-99.mp4",
+      video: "/Videos/Video-99.mp4",
     },
     {
-        userDp: "sekiro.jpg",
+        userDp: "/Images/sekiro.jpg",
         username: "sekiro_editzz",
         like: "50k",
         comment: "649",
-        video: "Video-169.mp4",
+        video: "/Videos/Video-169.mp4",
     },
     {
-        userDp: "nature.jpg",
+        userDp: "/Images/nature.jpg",
         username: "swiss.beautifuls",
         like: "176k",
         comment: "1,057",
-        video: "Video-11.mp4",
+        video: "/Videos/Video-11.mp4",
     },
   ];
 
@@ -59,7 +59,7 @@ function displayReels() {
                             <small>${reel.comment}</small>
                         </div>
                         <i class="far fa-paper-plane"></i>
-                        <img src="darkMenu.png" alt="" width="20px" height="20px">
+                        <img src="/Images/darkMenu.png" alt="" width="20px" height="20px">
                         <img src="${reel.userDp}" alt="" width="20px" height="20px" class="profile-pic">
                     </div>
                     <div class="user_profile">

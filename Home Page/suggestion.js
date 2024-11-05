@@ -2,7 +2,7 @@ function displaySuggest(){
   let suggestions = [
     {
       username: "_itz_singh_28",
-      userPic: "userDp.jpg",
+      userPic: "/Images/userDp.jpg",
       follow: "abhinav_jindal",
     },
 

@@ -2,8 +2,8 @@ function displayPosts() {
   let posts = [
     {
       username: "indiancricketteam",
-      userDp: "indianct.jpg",
-      imageUrl: "wc24.webp",
+      userDp: "/Images/indianct.jpg",
+      imageUrl: "/Images/wc24.webp",
       likes: "5.5M",
       comments: "77.5K",
       shares: "4.8M",
@@ -11,8 +11,8 @@ function displayPosts() {
     },
     {
         username: "cristiano",
-        userDp: "cr7dp.jpg",
-        imageUrl: "cristiano.jpg",
+        userDp: "/Images/cr7dp.jpg",
+        imageUrl: "/Images/cristiano.jpg",
         likes: "9.6M",
         comments: "88.8K",
         shares: "60.8K",
@@ -20,8 +20,8 @@ function displayPosts() {
     },
     {
         username: "leomessi",
-        userDp: "leodp.jpg",
-        imageUrl: "leomessi.jpg",
+        userDp: "/Images/leodp.jpg",
+        imageUrl: "/Images/leomessi.jpg",
         likes: "9M",
         comments: "80K",
         shares: "70.8K",
@@ -29,8 +29,8 @@ function displayPosts() {
     },
     {
         username: "virat.kohli",
-        userDp: "viratDp.jpg",
-        imageUrl: "viratkohli.jpg",
+        userDp: "/Images/viratDp.jpg",
+        imageUrl: "/Images/viratkohli.jpg",
         likes: "6.7M",
         comments: "52.5K",
         shares: "30K",
@@ -38,8 +38,8 @@ function displayPosts() {
     },
     {
         username: "kendalljenner",
-        userDp: "kendallDp.jpg",
-        imageUrl: "kendall.jpg",
+        userDp: "/Images/kendallDp.jpg",
+        imageUrl: "/Images/kendall.jpg",
         likes: "2.1M",
         comments: "6,469",
         shares: "20K",
@@ -55,7 +55,7 @@ function displayPosts() {
         <div class="name">
             <img src="${post.userDp}" alt="userDP" class="indiact">
             <span class="username">${post.username}</span>
-            <img src="tick.png" alt="Verified tick" class="tick">
+            <img src="/Images/tick.png" alt="Verified tick" class="tick">
         </div>
         <div class="img-container">
             <img src="${post.imageUrl}" alt="Post by ${post.username}" class="post-image">
@@ -82,19 +82,19 @@ function displayPosts() {
          <div class="feature dark-like-icon">
             <div class="likecommentshare">
                 <button class="like">
-                    <img src="darkHeart.png" class="dark-img">
+                    <img src="/Images/darkHeart.png" class="dark-img">
                     <p class="post-likes">${post.likes}</p>
                 </button>
                 <button class="comment">
-                    <img src="darkMessage.png" class="dark-img">
+                    <img src="/Images/darkMessage.png" class="dark-img">
                     <p class="post-likes">${post.comments}</p>
                 </button>
                 <button class="share">
-                    <img src="darkShare.png" class="dark-img">
+                    <img src="/Images/darkShare.png" class="dark-img">
                     <p class="post-likes">${post.shares}</p>
                 </button>
                 <button class="save left">
-                    <img src="darkSave.png">
+                    <img src="/Images/darkSave.png">
                 </button>
             </div>
         </div>
@@ -108,7 +108,7 @@ document.querySelectorAll('.like').forEach(button => {
         const likeIcon = button.querySelector('i');
         if (likeIcon.classList.contains('far')) {
             const redLikeImage = document.createElement('img');
-            redLikeImage.src = 'redlike.png';
+            redLikeImage.src = '/Images/redlike.png';
             redLikeImage.style.width = '24px';
             redLikeImage.style.height = '24px';
             button.replaceChild(redLikeImage, likeIcon);
@@ -127,7 +127,7 @@ button.addEventListener('click', () => {
         button.replaceChild(originalIcon, currentLikeImage);
     } else {
         const redLikeImage = document.createElement('img');
-        redLikeImage.src = 'redlike.png';
+        redLikeImage.src = '/Images/redlike.png';
         redLikeImage.style.width = '24px';
         redLikeImage.style.height = '24px';
         button.replaceChild(redLikeImage, button.querySelector('i'));
