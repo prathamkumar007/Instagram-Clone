@@ -1,0 +1,325 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="profilepage.css">
+        <title>Instagram</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="navbar2">
+                <div class="settings">
+                    <img src="/Frontend/Images/black-settings-button.png" alt="">
+                </div>
+                <div class="account-name">
+                    <p>_ppratham_kumar</p>
+                </div>
+                <div class="threads-account2">
+                    <img src="/Frontend/Images/threads.png" alt="">
+                </div>
+            </div>
+            <div class="navbar">
+                <div class="nav-logo">
+                    <h2 class="namelogo">Instagram</h2>
+                    <img src="/Frontend/Images/instagram.png" alt="">
+                </div>
+                <div class="nav-topics">
+                    <div class="home topics">
+                        <img src="/Frontend/Images/hut.png" alt="" class="light-icon">
+                        <img src="/Frontend/Images/darkHome.png" alt="" class="dark-icon">
+                        <p onclick="home()">Home</p>
+                    </div>
+                    <div class="search topics">
+                        <img src="/Frontend/Images/search.png" alt="" class="light-icon">
+                        <img src="/Frontend/Images/darkSearch.png" alt="" class="dark-icon">
+                        <p>Search</p>
+                    </div>
+                    <div class="explore topics">
+                        <img src="/Frontend/Images/compass.png" alt="" class="light-icon">
+                        <img src="/Frontend/Images/darkExplore.png" alt="" class="dark-icon">
+                        <p>Explore</p>
+                    </div>
+                    <div class="reels topics">
+                        <img src="/Frontend/Images/reels.png" alt="" class="light-icon">
+                        <img src="/Frontend/Images/darkReel.png" alt="" class="dark-icon">
+                        <p onclick="reels()">Reels</p>
+                    </div>
+                    <div class="message topics">
+                        <img src="/Frontend/Images/messenger.png" alt="" class="light-icon">
+                        <img src="/Frontend/Images/darkMessage.png" alt="" class="dark-icon">
+                        <p>Messages</p>
+                    </div>
+                    <div class="notifications topics">
+                        <img src="/Frontend/Images/notification.png" alt="" class="light-icon">
+                        <img src="/Frontend/Images/darkHeart.png" alt="" class="dark-icon">
+                        <p>Notifications</p>
+                    </div>
+                    <div class="create topics">
+                        <img src="/Frontend/Images/tab.png" alt="" class="light-icon">
+                        <img src="/Frontend/Images/darkCreate.png" alt="" class="dark-icon">
+                        <p>Create</p>
+                    </div>
+                    <div class="profile topics">
+                        <img src="/Frontend/Images/user.png" alt="">
+                        <h3>Profile</h3>
+                    </div>
+                </div>
+                <div class="nav-threads topics">
+                    <img src="/Frontend/Images/threads.png" alt="" class="light-icon">
+                    <img src="/Frontend/Images/darkThreads.png" alt="" class="dark-icon">
+                    <p>Threads<p>
+                </div>
+                <div class="more-settings">
+                    <div class="more-set">
+                        <img src="/Frontend/Images/darkSettings.png" alt="" class="dark-set">
+                        <img src="/Frontend/Images/settings.png" alt="" class="light-set">
+                        <p>Settings</p>
+                    </div>
+                    <div class="more-set">
+                        <img src="/Frontend/Images/darkActivity.png" alt="" class="dark-set">
+                        <img src="/Frontend/Images/activity.png" alt="" class="light-set">
+                        <p>Your activity</p>
+                    </div>
+                    <div class="more-set">
+                        <img src="/Frontend/Images/dark-save-instagram.png" alt="" class="dark-set">
+                        <img src="/Frontend/Images/save-instagram.png" alt="" class="light-set">
+                        <p>Saved</p>
+                    </div>
+                    <div class="more-set">
+                        <img src="/Frontend/Images/darkMoon.png" alt="" class="dark-set">
+                        <img src="/Frontend/Images/sun.png" alt="" class="light-set">
+                        <p id="darkMode">Switch appearance</p>
+                    </div>
+                    <div class="more-set">  
+                        <img src="/Frontend/Images/darkProblem.png" alt="" class="dark-set"> 
+                        <img src="/Frontend/Images/problem.png" alt="" class="light-set">
+                        <p>Report Problem</p>
+                    </div>
+                    <hr class="hr-2" id="hr2">
+                    <div class="more-set">
+                        <p >Switch Accounts</p>
+                    </div>
+                    <hr class="hr-settings" id="hrset">
+                    <div class="more-set">
+                        <p>Log Out</p>
+                    </div>
+                </div>
+                <div class="nav-more topics">
+                    <img src="/Frontend/Images/menu.png" alt="" class="light-icon">
+                    <img src="/Frontend/Images/darkMenu.png" alt="" class="dark-icon">
+                    <p onclick="Settings()">More</p>
+                </div>
+            </div>
+            <div class="users-profile">
+                <div class="users-profile-child">
+                    <div class="profile-pic">
+                        <img src="/Frontend/Images/user.png" alt="">
+                        <div class="part3 res">
+                            <div class="Name">
+                                <h3>Pratham Kumar</h3>
+                            </div>
+                            <div class="threads-account">
+                                <button>
+                                    <img src="/Frontend/Images/threads.png" alt="" class="thread-img">
+                                    _ppratham_kumar</button>
+                            </div>
+                        </div>
+                        <div class="new">
+                            <a href="#">
+                                <img src="/Frontend/Images/add.png" alt="">
+                                <p class="new1">New</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="all-details">
+                        <div class="part1">
+                            <div class="username res-username">
+                                <p>_ppratham_kumar</p>
+                            </div>
+                            <div class="edit">
+                                <button class="edit-btn">Edit Profile</button>
+                            </div>
+                            <div class="View">
+                                <button class="view-btn">View archive</button>
+                            </div>
+                            <div style="cursor: pointer;">
+                                <img src="/Frontend/Images/black-settings-button.png" alt="" class="light-set" onclick="toggleSettings()">
+                                <img src="/Frontend/Images/darkSettings.png" alt="" class="dark-set" onclick="toggleSettings()">
+                            </div>
+                        </div>
+
+                        <div class="part1 res-part1">
+                            <div class="username">
+                                <p>_ppratham_kumar</p>
+                                <div>
+                                    <img src="/Frontend/Images/black-settings-button.png" alt="">
+                                </div>
+                            </div>
+                        <div class="res-button">
+                            <div class="edit">
+                                <button>Edit Profile</button>
+                            </div>
+                            <div class="View">
+                                <button>View archive</button>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="part2">
+                            <div class="posts">
+                                <p> <span>0</span> posts</p>
+                            </div>
+                            <div class="followers">
+                                <p><span>160</span> followers</p>
+                            </div>
+                            <div class="following">
+                                <p><span>227</span> following</p>
+                            </div>
+                        </div>
+                        <div class="part3">
+                            <div class="Name">
+                                <h3>Pratham Kumar</h3>
+                            </div>
+                            <div class="threads-account">
+                                <button class="thread-btn">
+                                    <img src="/Frontend/Images/threads.png" alt="" class="thread-img light-set">
+                                    <img src="/Frontend/Images/darkThreads.png" alt="" class="dark-set">
+                                    <div class="thread-p">
+                                        _ppratham_kumar
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-background" id="modalBackground"></div>
+                <div class="insta-settings" id="insta-setting">
+                    <div class="features">
+                        <button class="features-btn">Apps and websites</button>
+                        <hr class="hr3">
+                        <button class="features-btn">QR code</button>
+                        <hr class="hr3">
+                        <button class="features-btn">Notifications</button>
+                        <hr class="hr3">
+                        <button class="features-btn">Settings and privacy</button>
+                        <hr class="hr3">
+                        <button class="features-btn">Supervision</button>
+                        <hr class="hr3">
+                        <button class="features-btn">Login activity</button>
+                        <hr class="hr3">
+                        <button class="features-btn">Log Out</button>
+                        <hr class="hr3">
+                        <button class="features-btn" onclick="cancel()">Cancel</button>
+                    </div>    
+                </div>
+                <div class="numbers">
+                    <div class="posts">
+                        <p> <span>0</span></p>
+                        <div>Posts</div>
+                    </div>
+                    <div class="followers">
+                        <p><span>160</span></p>
+                        <div>followers</div>
+                    </div>
+                    <div class="following">
+                        <p><span>227</span></p>
+                        <div>following</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="share">
+                    <div class="share-1">
+                        <div class="Posts">
+                            <img src="/Frontend/Images/profile.png" alt="" class="light-set">
+                            <img src="/Frontend/Images/darkProfile.png" alt="" class="dark-set">
+                            <p class="share-p">POSTS</p>
+                        </div>
+
+                        <div class="Posts">
+                            <img src="/Frontend/Images/save-instagram.png" alt="" class="light-set">
+                            <img src="/Frontend/Images/darkSave.png" alt="" class="dark-set">
+                            <p class="share-p">SAVED</p>
+                        </div>
+
+                        <div class="Posts">
+                            <img src="/Frontend/Images/comment.png" alt="" class="light-set">
+                            <img src="/Frontend/Images/darkTag.png" alt="" class="dark-set">
+                            <p class="share-p">TAGGED</p>
+                        </div>
+
+                    </div>
+                    <div class="share-2">
+                        <img src="/Frontend/Images/post1.jpg" alt="">
+                        <img src="/Frontend/Images/post2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="about">
+                        <p>Meta</p>
+                        <p>About</p>
+                        <p>Blog</p>
+                        <p>Jobs</p>
+                        <p>Help</p>
+                        <p>API</p>
+                        <p>Privacy</p>
+                        <p>Terms</p>
+                        <p>Locations</p>
+                        <p>Instagram Lite</p>
+                        <p>Threads</p>
+                        <p>Contact</p>
+                        <p>Uploading & Non-Users</p>
+                        <p>Meta Verified</p>
+                    </div>
+                    <div class="languages">
+                        <select name="languages" id="languages">
+                            <option value="en" class="lang">English</option>
+                            <option value="zh" class="lang">中文 (Chinese)</option>
+                            <option value="es" class="lang">Español (Spanish)</option>
+                            <option value="hi" class="lang">हिन्दी</option>
+                            <option value="ar" class="lang">العربية (Arabic)</option>
+                            <option value="pt" class="lang">Português (Portuguese)</option>
+                            <option value="bn" class="lang">বাংলা (Bengali)</option>
+                            <option value="ru" class="lang">Русский (Russian)</option>
+                            <option value="ja" class="lang">日本語 (Japanese)</option>
+                            <option value="de" class="lang">Deutsch (German)</option>
+                            <option value="fr" class="lang">Français (French)</option>
+                            <option value="ko" class="lang">한국어 (Korean)</option>
+                            <option value="it" class="lang">Italiano (Italian)</option>
+                            <option value="vi" class="lang">Tiếng Việt (Vietnamese)</option>
+                            <option value="tr" class="lang">Türkçe (Turkish)</option>
+                            <option value="ta" class="lang">தமிழ் (Tamil)</option>
+                            <option value="fa" class="lang">فارسی (Persian)</option>
+                            <option value="pl" class="lang">Polski (Polish)</option>
+                            <option value="th" class="lang">ไทย (Thai)</option>
+                            <option value="ur" class="lang">اردو (Urdu)</option>
+                        </select>
+                        <div class="copy">© 2024 Instagram from Meta</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="home1">
+                    <img src="/Frontend/Images/hut.png" alt="" onclick="home()">
+                </div>
+                <div class="explore1">
+                    <img src="/Frontend/Images/compass.png" alt="">
+                </div>
+                <div class="reels1">
+                    <img src="/Frontend/Images/reels.png" alt="">
+                </div>
+                <div class="create1">
+                    <img src="/Frontend/Images/tab.png" alt="">
+                </div>
+                <div class="notification1">
+                    <img src="/Frontend/Images/messenger.png" alt="">
+                </div>
+                <div class="profile1">
+                    <img src="/Frontend/Images/user.png" alt="">
+                </div>
+            </div>
+        </div>
+        <script src="profilepage.js"></script>
+    </body>
+    </html>

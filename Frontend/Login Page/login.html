@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram - Login or Sign up</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <img id="sideimage" src="/Frontend/Images/sideImage.jpg" alt="Instagram side image">
+        <div class="box">
+            <form name="loginform" id="loginForm" onsubmit="return validateLogin(event)">
+                <h1>Instagram</h1>
+                <input type="text" name="uname" placeholder="Username" required>
+                <input type="password" name="pwd" placeholder="Password" required><br>
+                <input class="loginbtn" type="submit" value="Login">
+                <hr> or <hr>
+                <br>
+                <p id="loginfb">Log in with Facebook</p><br>
+                <p id="forgotpass">Forgotten your password?</p>
+                <p class="error-message" id="loginError"></p>
+            </form> 
+
+            <form name="signupform" id="signupForm" onsubmit="return handleSignup(event)">
+                <h1>Instagram</h1>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="repassword" placeholder="Re-enter Password" required>
+                <input type="number" name="age" placeholder="Age" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input class="signupbtn" type="submit" value="Sign Up">
+                <p class="error-message" id="signupError"></p>
+            </form>
+
+            <div class="newaccount">Don't have an account? <a href="#" onclick="toggleForms()">Sign up</a></div><br>
+            <img src="/Frontend/Images/apps.jpg" alt="Login get image">
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
