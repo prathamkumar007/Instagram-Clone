@@ -4,20 +4,16 @@ function toggleForms() {
     const newAccountDiv = document.querySelector('.newaccount');
 
     if (loginForm.style.display !== 'none') {
-       
         loginForm.style.display = 'none';
         signupForm.style.display = 'block';
         newAccountDiv.innerHTML = 'Have an account? <a href="#" onclick="toggleForms()">Log in</a>';
-       
         document.loginform.uname.value = '';
         document.loginform.pwd.value = '';
         document.getElementById('loginError').textContent = '';
     } else {
-        
         loginForm.style.display = 'block';
         signupForm.style.display = 'none';
         newAccountDiv.innerHTML = 'Don\'t have an account? <a href="#" onclick="toggleForms()">Sign up</a>';
-        
         document.signupform.username.value = '';
         document.signupform.password.value = '';
         document.signupform.repassword.value = '';
@@ -26,7 +22,6 @@ function toggleForms() {
         document.getElementById('signupError').textContent = '';
     }
 }
-
 
 function handleSignup(event) {
     event.preventDefault();
@@ -50,8 +45,8 @@ function handleSignup(event) {
             name: username,
             password: password,
             age: age,
-            email: `${username}@example.com`,
-            phone: phone
+            email: `${username}@gmail.com`,
+            phone: phone,
         }),
     })
         .then(response => response.json())
@@ -79,7 +74,7 @@ function validateLogin(event) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            email: `${username}@example.com`,
+            email: `${username}@gmail.com`,
             password: password,
         }),
     })
