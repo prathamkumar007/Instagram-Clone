@@ -4,15 +4,29 @@ function toggleForms() {
     const newAccountDiv = document.querySelector('.newaccount');
 
     if (loginForm.style.display !== 'none') {
+       
         loginForm.style.display = 'none';
         signupForm.style.display = 'block';
         newAccountDiv.innerHTML = 'Have an account? <a href="#" onclick="toggleForms()">Log in</a>';
+       
+        document.loginform.uname.value = '';
+        document.loginform.pwd.value = '';
+        document.getElementById('loginError').textContent = '';
     } else {
+        
         loginForm.style.display = 'block';
         signupForm.style.display = 'none';
         newAccountDiv.innerHTML = 'Don\'t have an account? <a href="#" onclick="toggleForms()">Sign up</a>';
+        
+        document.signupform.username.value = '';
+        document.signupform.password.value = '';
+        document.signupform.repassword.value = '';
+        document.signupform.age.value = '';
+        document.signupform.phone.value = '';
+        document.getElementById('signupError').textContent = '';
     }
 }
+
 
 function handleSignup(event) {
     event.preventDefault();
